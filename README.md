@@ -1,5 +1,7 @@
 # LaunchOps Kit
 
+[![CI](https://github.com/Dun1702/launchops-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/Dun1702/launchops-kit/actions/workflows/ci.yml)
+
 Production-minded deployment starter for full-stack apps: Docker Compose, Nginx reverse proxy, CI checks, health probes, backups, and release operations.
 
 ## Why This Exists
