@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Compose config
+        run: docker compose config
+
+      - name: Validate Nginx config presence
+        run: test -s nginx/app.conf
+
+      - name: Validate ops docs
+        run: test -s ops/release-checklist.md && test -s ops/backup-policy.md
